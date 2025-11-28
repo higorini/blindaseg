@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import CTAButton from "@/components/CTA/CTAButton";
 
 const products = [
   {
@@ -199,6 +200,9 @@ export default function Produtos() {
           {products.map((product) => (
             <ProdutoCard key={product.id} product={product} />
           ))}
+        </div>
+        <div className="mt-12 flex justify-center">
+          <CTAButton label="Planejar meu projeto blindado" />
         </div>
       </div>
     </section>

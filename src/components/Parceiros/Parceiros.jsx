@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CTAButton from "@/components/CTA/CTAButton";
 
 const partners = [
   { name: "AGP", logo: "/imagens/parceiros/agp.svg", width: 180, height: 180 },
@@ -52,6 +53,9 @@ export default function Parceiros() {
               />
             </div>
           ))}
+        </div>
+        <div className="mt-12 flex justify-center">
+          <CTAButton label="Conectar-se com um consultor" />
         </div>
       </div>
     </section>

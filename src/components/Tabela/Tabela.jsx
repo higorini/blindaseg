@@ -1,3 +1,5 @@
+import CTAButton from "@/components/CTA/CTAButton";
+
 const levels = [
   {
     id: "nivelI",
@@ -190,6 +192,9 @@ export default function Tabela() {
               </dl>
             </article>
           ))}
+        </div>
+        <div className="mt-12 flex justify-center">
+          <CTAButton label="Receber recomendação de blindagem" />
         </div>
       </div>
     </section>

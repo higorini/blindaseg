@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import CTAButton from "@/components/CTA/CTAButton";
 
 const DESKTOP_BREAKPOINTS = [
   {
@@ -101,6 +102,10 @@ export default function Hero() {
     ? "text-xl text-gray-200/90 max-w-lg ml-auto"
     : "text-lg sm:text-xl text-gray-200/90 max-w-xl mx-auto";
 
+  const ctaWrapperClasses = desktopLayout
+    ? "mt-10 flex justify-end"
+    : "mt-10 flex justify-center";
+
   const carWrapperClasses = [
     "w-full relative overflow-visible h-[360px] sm:h-[420px] md:h-[520px] lg:h-[760px] xl:h-[840px] 2xl:h-[900px]",
     "flex items-center",
@@ -167,6 +172,9 @@ export default function Hero() {
             Blindagem inteligente que não compromete performance. Proteção invisível para quem entende
             que verdadeira sofisticação é discreta.
           </p>
+          <div className={ctaWrapperClasses}>
+            <CTAButton label="Quero falar com um especialista" />
+          </div>
         </div>
 
         <div className={carWrapperClasses}>

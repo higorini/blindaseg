@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CTAButton from "@/components/CTA/CTAButton";
 
 const reasons = [
   {
@@ -78,6 +79,9 @@ export default function Diferenciais() {
               </article>
             ))}
           </div>
+        </div>
+        <div className="mt-12 flex justify-center">
+          <CTAButton label="Solicitar atendimento Blindaseg" />
         </div>
       </div>
     </section>

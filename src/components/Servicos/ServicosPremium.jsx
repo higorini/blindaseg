@@ -1,3 +1,5 @@
+import CTAButton from "@/components/CTA/CTAButton";
+
 const leftServices = [
   "Redimensionamento das suspensões dianteiras e traseiras",
   "Troca de molas e amortecedores especiais para blindados",
@@ -69,6 +71,9 @@ export default function ServicosPremium() {
         <div className="grid gap-10 lg:grid-cols-2">
           <ServiceColumn items={leftServices} />
           <ServiceColumn items={rightServices} />
+        </div>
+        <div className="mt-12 flex justify-center">
+          <CTAButton label="Agendar revisão com especialistas" />
         </div>
       </div>
     </section>

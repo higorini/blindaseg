@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CTAButton from "@/components/CTA/CTAButton";
 
 export default function Sobre() {
   return (
@@ -50,6 +51,9 @@ export default function Sobre() {
               />
             </div>
           </div>
+        </div>
+        <div className="mt-12 flex justify-center">
+          <CTAButton label="Quero uma consultoria Blindaseg" />
         </div>
       </div>
     </section>
