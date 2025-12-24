@@ -161,17 +161,13 @@ export default function Hero() {
       <div className={containerClasses}>
         <div className={textClasses}>
           <h1 className="text-4xl md:text-5xl lg:text-[3.73rem] font-semibold text-white leading-tight mb-6">
-            <span className="text-[var(--color-primary-500)]">
-              Uma solução silenciosa, discreta e moderna,{" "}
+            <span className="text-white">
+              Uma solução silenciosa, discreta e moderna.{" "}
             </span>
-            <span className="text-white font-light">
-              feita para poucos: aqueles que unem segurança, estilo e perspicácia em cada escolha.
+            <span className="text-[var(--color-primary-500)]">
+              Feita para você.
             </span>
           </h1>
-          <p className={paragraphClasses}>
-            Blindagem inteligente que não compromete performance. Proteção invisível para quem entende
-            que verdadeira sofisticação é discreta.
-          </p>
           <div className={ctaWrapperClasses}>
             <CTAButton label="Quero falar com um especialista" />
           </div>

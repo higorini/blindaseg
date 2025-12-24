@@ -175,10 +175,10 @@ export default function Produtos() {
       <div className="relative z-10 max-w-7xl mx-auto pt-16">
         <header className="mb-12 text-center">
           <p className="tracking-[0.4em] text-[0.8rem] uppercase text-[var(--color-primary-500)]">
-            Soluções Premium
+            Soluções diferenciadas para uma blindagem exclusiva
           </p>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-white">
-            Segurança discreta, para quem entende
+            Segurança percebida.
           </h2>
           <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
             Duas soluções sofisticadas que preservam elegância, performance e silêncio absoluto. Escolha
