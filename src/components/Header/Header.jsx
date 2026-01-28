@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { config } from "@/constants/config";
 
 export default function Header() {
@@ -9,10 +10,21 @@ export default function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--color-primary-500)]/15 bg-[rgba(0,0,0,0.75)] backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
-        <div className="text-2xl font-semibold text-[var(--color-primary-500)]">
-          {config.siteName}
+        {/* Logo */}
+        <div className="w-1/3">
+          <a href="#">
+            <Image
+              src="/imagens/logo/logo-titulo.png"
+              alt={config.siteName}
+              width={400}
+              height={50}
+              className="h-8 w-44 object-contain sm:h-10 md:h-12"
+              priority
+            />
+          </a>
         </div>
 
+        {/* Menu mobile */}
         <button
           className="md:hidden text-white"
           onClick={() => setMenuOpen((prev) => !prev)}
@@ -21,25 +33,31 @@ export default function Header() {
           ☰
         </button>
 
-        <ul className="hidden items-center gap-8 text-sm uppercase tracking-[0.3em] text-white md:flex">
-          {config.navigation.map((item) => (
-            <li key={item.href}>
-              <a
-                href={item.href}
-                className="text-white/80 transition hover:text-[var(--color-primary-500)]"
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        {/* Links */}
+        <div className="hidden w-1/3 md:block">
+          <ul className="flex items-center justify-center gap-8 text-sm uppercase tracking-[0.3em] text-white">
+            {config.navigation.map((item) => (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  className="text-white/80 transition hover:text-[var(--color-primary-500)]"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        <a
-          href="#contato"
-          className="hidden md:inline-flex items-center rounded-full border border-[var(--color-primary-500)] px-5 py-2 text-sm font-semibold text-[var(--color-primary-500)] transition hover:bg-[var(--color-primary-500)] hover:text-black"
-        >
-          Consultoria Exclusiva
-        </a>
+        {/* Botão */}
+        <div className="hidden w-1/3 md:flex justify-end">
+          <a
+            href="#contato"
+            className="inline-flex items-center rounded-full border border-[var(--color-primary-500)] px-5 py-2 text-sm font-semibold text-[var(--color-primary-500)] transition hover:bg-[var(--color-primary-500)] hover:text-black"
+          >
+            Consultoria Exclusiva
+          </a>
+        </div>
       </nav>
 
       {menuOpen && (
